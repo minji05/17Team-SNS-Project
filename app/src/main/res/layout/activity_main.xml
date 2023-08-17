@@ -43,7 +43,7 @@
         android:background="@color/black"
         android:text="ADD"
         android:textColor="#3FB5A3"
-        android:textSize="9pt" />
+        android:textSize="8pt" />
 
 
 </RelativeLayout>
