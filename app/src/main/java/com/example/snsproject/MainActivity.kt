@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.CalendarContract
 import android.util.Log
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
@@ -19,6 +20,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        setSupportActionBar(requireViewById(R.id.toolbar_myPage)) // 불러오기
+        supportActionBar?.setDisplayHomeAsUpEnabled(true) // 툴바 뒤로가기
+        supportActionBar?.setDisplayShowTitleEnabled(false) // 툴바 TextView 타이틀 지움
 
         et_container = findViewById(R.id.et_container)
         val make_tv_button = findViewById<Button>(R.id.make_tv_button)
@@ -42,6 +47,35 @@ class MainActivity : AppCompatActivity() {
             new_textView.setOnClickListener {
                 val intent = Intent(this, DetailPageActivity::class.java)
                 startActivity(intent)
+            }
+        }
+
+
+        fun memberInfoDelete() {
+            TODO("Not yet implemented")
+        }
+
+        fun goToUpdate() {
+            TODO("Not yet implemented")
+        }
+
+        fun onOptionsItemSelected(item: MenuItem): Boolean {
+            when (item.itemId) { // 수정중
+                R.id.item_memberinfo_delete-> {
+                    memberInfoDelete()
+                    return super.onOptionsItemSelected(item)
+                }
+
+                R.id.item_memberinfo_update -> {
+                    goToUpdate()
+                    return super.onOptionsItemSelected(item)
+                }
+                // 뒤로가기는 버튼을 따로 안만들어도 id가 정해져있습니다
+                android.R.id.home -> {
+                    finish()
+                    return super.onOptionsItemSelected(item)
+                }
+                else -> return super.onOptionsItemSelected(item)
             }
         }
 

@@ -7,10 +7,21 @@
     android:orientation="horizontal"
     tools:context=".MainActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_myPage"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/_111"/>
+    </androidx.appcompat.widget.Toolbar>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/button"
+        android:layout_above="@+id/make_tv_button"
         android:layout_alignParentStart="true">
 
         <LinearLayout

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SNSProject</string>
+    <string name="item_memberinfo_delete" />
+    <string name="item_memberinfo_update" />
+    <drawable name="item_memberinfo_delete" />
+    <drawable name="item_memberinfo_update" />
 </resources>
