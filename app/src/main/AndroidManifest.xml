@@ -13,7 +13,7 @@
         android:theme="@style/Theme.SNSProject"
         tools:targetApi="31">
         <activity
-            android:name=".mypage.MyPageActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".detailpage.DetailPageActivity"
@@ -22,7 +22,7 @@
             android:name=".signinanduppage.SignInActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".mypage.MyPageActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
