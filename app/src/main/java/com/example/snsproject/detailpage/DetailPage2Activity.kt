@@ -7,10 +7,11 @@ import android.widget.Button
 import android.widget.TextView
 import com.example.snsproject.R
 
-class DetailPageActivity : AppCompatActivity() {
+class DetailPage2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_page)
+
 
         //전달받은 데이터를 출력
         val intent = intent.getStringExtra("dataFromFirstActivity")
