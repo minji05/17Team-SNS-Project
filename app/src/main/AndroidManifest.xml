@@ -20,10 +20,10 @@
             android:name=".detailpage.DetailPageActivity"
             android:exported="false" />
         <activity
-            android:name=".signinanduppage.SignInActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".signinanduppage.SignInActivity"
             android:exported="false" />
 
         <activity
