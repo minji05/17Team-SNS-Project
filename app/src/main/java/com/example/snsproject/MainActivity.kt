@@ -1,21 +1,18 @@
 package com.example.snsproject
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.CalendarContract
 import android.util.Log
-import android.view.Gravity
 import android.view.MenuItem
 import android.widget.Button
-import android.widget.EditText
 import android.widget.LinearLayout
-import android.widget.ScrollView
 import android.widget.TextView
+import android.widget.Toast
 import com.example.snsproject.detailpage.DetailPageActivity
-import com.example.snsproject.signinanduppage.UserInfo
+import com.example.snsproject.mypage.MyPageActivity
+import com.example.snsproject.signinanduppage.UserManager
 
 class MainActivity : AppCompatActivity() {
 
@@ -30,6 +27,22 @@ class MainActivity : AppCompatActivity() {
 
         et_container = findViewById(R.id.et_container)
         val make_tv_button = findViewById<Button>(R.id.make_tv_button)
+
+        val btnMyPage = findViewById<Button>(R.id.btn_myPage)
+
+        btnMyPage.setOnClickListener {
+            val userId = intent.getStringExtra("id")
+            if (userId != null) {
+                val user = UserManager.findUser(userId)
+                if (user != null) {
+                    val intent = Intent(this, MyPageActivity::class.java)
+                    intent.putExtra("user_info", user)
+                    startActivity(intent)
+                } else {
+                    Toast.makeText(this, "User not found", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
 
         make_tv_button.setOnClickListener {
             val new_textView = TextView(this)

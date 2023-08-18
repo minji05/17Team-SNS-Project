@@ -4,13 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
-import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import com.example.snsproject.R
 import com.example.snsproject.signinanduppage.UserInfo
-import com.example.snsproject.signinanduppage.UserManager
 
 class MyPageActivity : AppCompatActivity() {
 
@@ -23,11 +19,8 @@ class MyPageActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
-        val userId = intent.getStringExtra("id")
-        if (userId != null) {
-            userInfo = UserManager.findUser(userId) ?: UserInfo("", "", "", "")
-            displayUserInfo()
-        }
+        userInfo = intent.getParcelableExtra("user_info") ?: UserInfo("", "", "", "")
+        displayUserInfo()
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.item_toolbar_mypage, menu)
