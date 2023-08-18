@@ -13,21 +13,9 @@ class DetailPage1Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_page1)
 
-        val partImg: ImageView = findViewById(R.id.detailImg)
-        partImg.clipToOutline = true
-
-        //전달받은 데이터를 출력
-        val intent = intent.getStringExtra("dataFromFirstActivity")
-        val idText = findViewById<TextView>(R.id.detailID)
-        idText.text ="아이디 : ${intent}"
-
-
-//        //뒤로가기 버튼 누를 시
-//        val btn = findViewById<Button>(R.id.backBtn)
-//        btn.setOnClickListener {
-//            finish()
-//        }
-//
+        setSupportActionBar(requireViewById(R.id.detailToolbar))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
 
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

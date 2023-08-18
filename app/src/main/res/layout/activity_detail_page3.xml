@@ -6,147 +6,135 @@
     android:layout_height="match_parent"
     tools:context=".detailpage.DetailPage3Activity">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/linearLayout"
+
+    <ScrollView
         android:layout_width="0dp"
-        android:layout_height="312dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/detailToolbar"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="#BAE1F6"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <Button
-                android:id="@+id/backBtn"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:background="@drawable/back"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="SpeakableTextPresentCheck" />
-
-            <TextView
-                android:id="@+id/detailText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="15dp"
-                android:text="Detail"
-                android:textSize="22dp"
-                android:textStyle="bold" />
-
-        </androidx.appcompat.widget.Toolbar>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/ConstraintLayout"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:background="#B9E0F5">
-
-            <LinearLayout
-                android:id="@+id/line1"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@drawable/rounded_image"
-                android:gravity="center"
-                android:padding="3dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.333">
-
-                <ImageView
-                    android:id="@+id/detailImg"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/rounded_image"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/img1" />
-            </LinearLayout>
-
-
-            <TextView
-                android:id="@+id/detailID"
-                android:layout_width="222dp"
-                android:layout_height="27dp"
-                android:layout_marginBottom="120dp"
-                android:text="shin"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.452"
-                app:layout_constraintStart_toEndOf="@+id/line1"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.192" />
-
-            <TextView
-                android:id="@+id/detailName"
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:layout_marginEnd="68dp"
-                android:layout_marginBottom="108dp"
-                android:text="신민지"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.224"
-                app:layout_constraintStart_toEndOf="@+id/line1"
-                app:layout_constraintTop_toBottomOf="@+id/detailID"
-                app:layout_constraintVertical_bias="0.149" />
-
-            <TextView
-                android:id="@+id/detailMBTI"
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:layout_marginEnd="68dp"
-                android:layout_marginBottom="124dp"
-                android:text="ISFP"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-
-                app:layout_constraintHorizontal_bias="0.228"
-                app:layout_constraintStart_toEndOf="@+id/line1" />
-
-            <TextView
-                android:id="@+id/detailComment"
-                android:layout_width="224dp"
-                android:layout_height="69dp"
-                android:layout_marginBottom="36dp"
-                android:text="사진은 며칠 전에 본 귀여운 강아지입니다!! 저는 강아지를 좋아해요! 다 같이 으쌰으쌰해서 잘 마무리 해봅시다!!"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.47"
-                app:layout_constraintStart_toEndOf="@+id/line1"
-                app:layout_constraintTop_toBottomOf="@+id/detailMBTI"
-                app:layout_constraintVertical_bias="0.428" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout">
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="312dp"
+                android:orientation="vertical">
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/detailToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="#BAE1F6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/detailText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Detail"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                </androidx.appcompat.widget.Toolbar>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ConstraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="#B9E0F5">
+
+                    <LinearLayout
+                        android:id="@+id/line1"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:background="@drawable/rounded_image"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.333">
+
+                        <ImageView
+                            android:id="@+id/detailImg"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_image"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img1" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/detailID"
+                        android:layout_width="222dp"
+                        android:layout_height="27dp"
+                        android:layout_marginBottom="120dp"
+                        android:text="shin"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.452"
+                        app:layout_constraintStart_toEndOf="@+id/line1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.192" />
+
+                    <TextView
+                        android:id="@+id/detailName"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="68dp"
+                        android:layout_marginBottom="108dp"
+                        android:text="신민지"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.224"
+                        app:layout_constraintStart_toEndOf="@+id/line1"
+                        app:layout_constraintTop_toBottomOf="@+id/detailID"
+                        app:layout_constraintVertical_bias="0.149" />
+
+                    <TextView
+                        android:id="@+id/detailMBTI"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="68dp"
+                        android:layout_marginBottom="124dp"
+                        android:text="ISFP"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+
+                        app:layout_constraintHorizontal_bias="0.228"
+                        app:layout_constraintStart_toEndOf="@+id/line1" />
+
+                    <TextView
+                        android:id="@+id/detailComment"
+                        android:layout_width="224dp"
+                        android:layout_height="69dp"
+                        android:layout_marginBottom="36dp"
+                        android:text="사진은 며칠 전에 본 귀여운 강아지입니다!! 저는 강아지를 좋아해요! 다 같이 으쌰으쌰해서 잘 마무리 해봅시다!!"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.47"
+                        app:layout_constraintStart_toEndOf="@+id/line1"
+                        app:layout_constraintTop_toBottomOf="@+id/detailMBTI"
+                        app:layout_constraintVertical_bias="0.428" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
             <ImageView
                 android:id="@+id/detailImgView1"
