@@ -4,21 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".signinanduppage.SignInActivity">
+    tools:context=".signinanduppage.SignUpActivity">
 
 
     <ImageView
-        android:id="@+id/iv_home_logo"
+        android:id="@+id/imageView"
         android:layout_width="200dp"
         android:layout_height="150dp"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/iv_home_logo"
+        android:layout_marginTop="100dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/"
         android:text="아이디"
         android:textColor="@color/black"
-        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:text="Name"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:textSize="18sp"
+        android:hint="@string/signUp_name_et"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
     <TextView
         android:id="@+id/tv_id"
@@ -33,7 +63,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_home_logo" />
+        app:layout_constraintTop_toBottomOf="@+id/et_name" />
 
     <EditText
         android:id="@+id/et_id"
@@ -41,7 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="3dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="150dp"
         android:ems="10"
         android:hint="@string/signIn_id_et"
         android:inputType="text"
@@ -78,25 +108,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_pw" />
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="77dp"
+        android:layout_height="67dp"
+        app:srcCompat="@drawable/iv_home_logo"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
     <Button
-        android:id="@+id/button"
-        android:layout_width="326dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="60dp"
-        android:text="@string/signIn_login"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/button8"
+        android:layout_width="173dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="31dp"
+        android:text="CANCEL"
+        app:layout_constraintEnd_toStartOf="@+id/button9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_pw" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="326dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/signIn_signup"
+        android:id="@+id/button9"
+        android:layout_width="173dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="31dp"
+        android:text="DONE"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintStart_toEndOf="@+id/button8"
+        app:layout_constraintTop_toBottomOf="@+id/et_pw" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="중복체크"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="418dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
