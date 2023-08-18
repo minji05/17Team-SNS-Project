@@ -15,7 +15,7 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:src="@drawable/_111"
+            android:src="@drawable/signal"
             android:layout_gravity="end"/>
     </androidx.appcompat.widget.Toolbar>
 
@@ -48,23 +48,23 @@
         android:layout_marginTop="10dp"
         app:srcCompat="@drawable/hh" />
 
-    <ImageView
-        android:layout_width="96dp"
-        android:layout_height="118dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        app:srcCompat="@drawable/sj" />
+<!--    <ImageView-->
+<!--        android:layout_width="96dp"-->
+<!--        android:layout_height="118dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        app:srcCompat="@drawable/sj" />-->
 
-    <ImageView
-        android:layout_width="96dp"
-        android:layout_height="118dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        app:srcCompat="@drawable/mj" />
+<!--    <ImageView-->
+<!--        android:layout_width="96dp"-->
+<!--        android:layout_height="118dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        app:srcCompat="@drawable/mj" />-->
 
     <ScrollView
         android:layout_width="match_parent"
@@ -87,6 +87,13 @@
                 android:layout_marginTop="5dp"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/goyang" />
+
+            <TextView
+                android:id="@+id/name_su"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="사진은 고양이 무서워하던 저를 좋아하게 만들어준 길고양이입니다.고양이2: 3주 동안 잘 부탁드립니다 맡은 몫 열심히  하겠습니다 ~"
+                android:textSize="9pt"/>
 
 
         </LinearLayout>
