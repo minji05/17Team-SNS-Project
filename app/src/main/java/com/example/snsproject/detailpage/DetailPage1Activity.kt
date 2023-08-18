@@ -4,27 +4,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import com.example.snsproject.R
 
 class DetailPage1Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail_page)
+        setContentView(R.layout.activity_detail_page1)
 
-
-        //전달받은 데이터를 출력
-        val intent = intent.getStringExtra("dataFromFirstActivity")
-        val idText = findViewById<TextView>(R.id.detailID)
-        idText.text ="아이디 : ${intent}"
-
-
-//        //뒤로가기 버튼 누를 시
-//        val btn = findViewById<Button>(R.id.backBtn)
-//        btn.setOnClickListener {
-//            finish()
-//        }
-//
+        setSupportActionBar(requireViewById(R.id.detailToolbar))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
 
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
