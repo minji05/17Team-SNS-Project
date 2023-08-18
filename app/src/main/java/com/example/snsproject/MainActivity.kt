@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
                     goToUpdate()
                     return super.onOptionsItemSelected(item)
                 }
-                // 뒤로가기는 버튼을 따로 안만들어도 id가 정해져있습니다
+
                 android.R.id.home -> {
                     finish()
                     return super.onOptionsItemSelected(item)
