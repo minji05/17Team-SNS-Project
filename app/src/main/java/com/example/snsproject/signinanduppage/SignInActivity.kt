@@ -5,11 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.ImageView
-import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.content.res.ResourcesCompat
 import com.example.snsproject.R
 
 class SignInActivity : AppCompatActivity() {
@@ -22,8 +19,8 @@ class SignInActivity : AppCompatActivity() {
 
         val et_id = findViewById<EditText>(R.id.et_id)
         val et_pw = findViewById<EditText>(R.id.et_pw)
-        val btn_login = findViewById<Button>(R.id.button)
-        val btn_signUp = findViewById<Button>(R.id.button2)
+        val btn_login = findViewById<Button>(R.id.btn_login)
+        val btn_signUp = findViewById<Button>(R.id.btn_signUp)
 
         activityResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             if (it.resultCode == RESULT_OK) {
@@ -36,7 +33,7 @@ class SignInActivity : AppCompatActivity() {
 
         btn_login.setOnClickListener{
             if(et_id.text.toString().trim().isEmpty() || et_pw.text.toString().trim().isEmpty()){
-                Toast.makeText(this, getString(R.string.toast_msg_idpqErr), Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, getString(R.string.toast_msg_idpqErr), Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
