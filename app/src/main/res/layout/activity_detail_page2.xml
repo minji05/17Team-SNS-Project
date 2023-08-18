@@ -33,7 +33,7 @@
                     android:id="@+id/detailToolbar"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:background="#D293F4"
+                    android:background="#FFB952"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -54,7 +54,7 @@
                     android:id="@+id/ConstraintLayout"
                     android:layout_width="match_parent"
                     android:layout_height="250dp"
-                    android:background="#D192F3">
+                    android:background="#FEB852">
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/detailImg"
@@ -62,7 +62,7 @@
                         android:layout_height="100dp"
                         android:layout_marginStart="40dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/img_sea"
+                        android:src="@drawable/img3"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
@@ -75,7 +75,7 @@
                         android:layout_width="222dp"
                         android:layout_height="27dp"
                         android:layout_marginBottom="120dp"
-                        android:text="lee"
+                        android:text="jeon"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -89,7 +89,7 @@
                         android:layout_height="30dp"
                         android:layout_marginEnd="124dp"
                         android:layout_marginBottom="108dp"
-                        android:text="이동희"
+                        android:text="전환휘"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.224"
@@ -102,7 +102,7 @@
                         android:layout_height="30dp"
                         android:layout_marginEnd="124dp"
                         android:layout_marginBottom="120dp"
-                        android:text="ISTJ"
+                        android:text="INFP"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.228"/>
@@ -112,7 +112,7 @@
                         android:layout_width="224dp"
                         android:layout_height="69dp"
                         android:layout_marginBottom="36dp"
-                        android:text="3주동안 고생 많이 하셧습니다\n남은 기간도 열심히 같이 달려봅시다!"
+                        android:text="저희 집 강아지를 소개합니다.! \n말티즈\n13년 5개월 | 3kg "
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.47"
@@ -128,18 +128,18 @@
                 android:layout_height="243dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/ic_launcher_foreground"
+                android:background="@drawable/bike"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
 
             <TextView
-                android:id="@+id/intentContent"
                 android:layout_width="300dp"
                 android:layout_height="61dp"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="30dp"
+                android:text="아침 일찍 운동하러 나갔어요.! 힘들기도 하지만 건강한 몸을 위해 꾸준한 노력이 정말 중요하다는 걸 느꼈습니다!!"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/intentImg" />
@@ -166,7 +166,7 @@
                         android:layout_height="35dp"
                         android:layout_marginStart="84dp"
                         android:layout_marginTop="20dp"
-                        android:text="소통해요!"
+                        android:text="꾸준함 중요하죠.! 화이팅!"
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold"
