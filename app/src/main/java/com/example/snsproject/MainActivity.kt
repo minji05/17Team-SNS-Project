@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.CalendarContract
 import android.util.Log
+import android.view.Gravity
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
@@ -35,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                 LinearLayout.LayoutParams.WRAP_CONTENT
             )
             new_textView.hint = "new"
-            new_textView.setTextSize(30F)
+            new_textView.setTextSize(45F)
 
             Log.d("SIZE", "사이즈 출력")
             new_textView.setTextColor(Color.GREEN)
