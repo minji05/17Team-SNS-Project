@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".detailpage.DetailPageActivity">
 
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
@@ -51,19 +52,28 @@
             android:id="@+id/ConstraintLayout"
             android:layout_width="match_parent"
             android:layout_height="210dp"
-            android:background="#D6E268">
+            android:background="#D6E268"
+            tools:layout_editor_absoluteY="60dp">
 
-
-            <ImageView
-                android:id="@+id/detailImg"
-                android:layout_width="118dp"
+            <LinearLayout
+                android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:layout_marginStart="28dp"
-                android:background="@drawable/user"
+                android:background="@drawable/rounded_image"
+                android:gravity="center"
+                android:padding="3dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.333" />
+                app:layout_constraintVertical_bias="0.333">
+
+                <ImageView
+                    android:id="@+id/detailImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img1" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/detailID"
@@ -73,52 +83,52 @@
                 android:text="minji"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/detailImg"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintHorizontal_bias="0.877"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.396" />
 
             <TextView
                 android:id="@+id/detailName"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
-                android:layout_marginEnd="68dp"
                 android:layout_marginBottom="108dp"
                 android:text="신민지"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.226"
-                app:layout_constraintStart_toEndOf="@+id/detailImg"
-                app:layout_constraintTop_toBottomOf="@+id/detailID" />
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detailID"
+                app:layout_constraintVertical_bias="0.684" />
 
             <TextView
                 android:id="@+id/detailMBTI"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
-                android:layout_marginEnd="68dp"
-                android:layout_marginBottom="76dp"
+                android:layout_marginBottom="72dp"
                 android:text="ISFP"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
 
-                app:layout_constraintHorizontal_bias="0.226"
-                app:layout_constraintStart_toEndOf="@+id/detailImg" />
+                app:layout_constraintHorizontal_bias="0.535"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/detailComment"
                 android:layout_width="123dp"
                 android:layout_height="30dp"
-                android:layout_marginEnd="120dp"
-                android:layout_marginBottom="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="118dp"
+                android:layout_marginBottom="40dp"
                 android:text="오늘 하루도 화이팅!"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/detailImg"
-                app:layout_constraintTop_toBottomOf="@+id/detailMBTI"
-                app:layout_constraintVertical_bias="0.8" />
+                app:layout_constraintStart_toEndOf="@+id/frameLayout"
+                app:layout_constraintTop_toBottomOf="@+id/detailMBTI" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.LinearLayoutCompat>
-
 
     <ScrollView
         android:layout_width="398dp"

@@ -4,14 +4,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import com.example.snsproject.R
 
 class DetailPage1Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail_page)
+        setContentView(R.layout.activity_detail_page1)
 
+        val partImg: ImageView = findViewById(R.id.detailImg)
+        partImg.clipToOutline = true
 
         //전달받은 데이터를 출력
         val intent = intent.getStringExtra("dataFromFirstActivity")
