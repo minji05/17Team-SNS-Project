@@ -3,6 +3,7 @@ package com.example.snsproject.detailpage
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.ImageView
 import android.widget.TextView
 import com.example.snsproject.R
 
@@ -11,9 +12,13 @@ class DetailPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_page)
         //전달받은 데이터를 출력
-        val intent = intent.getStringExtra("dataFromFirstActivity")
-        val idText = findViewById<TextView>(R.id.intentContent)
-        idText.text ="${intent}"
+        val text = intent.getStringExtra("dataFromFirstActivity")
+        val TextView = findViewById<TextView>(R.id.intentContent)
+        TextView.text ="${text}"
+
+        val resId = intent.getIntExtra("imageResId", 1)
+        val image = findViewById<ImageView>(R.id.intentImg)
+        image.setImageResource(resId)
 
 
         setSupportActionBar(requireViewById(R.id.detailToolbar))

@@ -56,26 +56,18 @@
                     android:layout_height="250dp"
                     android:background="#D192F3">
 
-                    <LinearLayout
-                        android:id="@+id/line1"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:background="@drawable/rounded_image"
-                        android:gravity="center"
-                        android:padding="3dp"
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/detailImg"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="40dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_sea"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.333">
-
-                        <ImageView
-                            android:id="@+id/detailImg"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/img_sea"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/img_sea" />
-                    </LinearLayout>
+                        app:layout_constraintVertical_bias="0.38"
+                        tools:ignore="MissingConstraints" />
 
 
                     <TextView
@@ -88,7 +80,6 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.452"
-                        app:layout_constraintStart_toEndOf="@+id/line1"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.192" />
 
@@ -96,28 +87,25 @@
                         android:id="@+id/detailName"
                         android:layout_width="100dp"
                         android:layout_height="30dp"
-                        android:layout_marginEnd="68dp"
+                        android:layout_marginEnd="124dp"
                         android:layout_marginBottom="108dp"
                         android:text="이동희"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.224"
-                        app:layout_constraintStart_toEndOf="@+id/line1"
                         app:layout_constraintTop_toBottomOf="@+id/detailID"
-                        app:layout_constraintVertical_bias="0.149" />
+                        app:layout_constraintVertical_bias="0.153" />
 
                     <TextView
                         android:id="@+id/detailMBTI"
                         android:layout_width="100dp"
                         android:layout_height="30dp"
-                        android:layout_marginEnd="68dp"
-                        android:layout_marginBottom="124dp"
+                        android:layout_marginEnd="124dp"
+                        android:layout_marginBottom="120dp"
                         android:text="ISTJ"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-
-                        app:layout_constraintHorizontal_bias="0.228"
-                        app:layout_constraintStart_toEndOf="@+id/line1" />
+                        app:layout_constraintHorizontal_bias="0.228"/>
 
                     <TextView
                         android:id="@+id/detailComment"
@@ -128,7 +116,6 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.47"
-                        app:layout_constraintStart_toEndOf="@+id/line1"
                         app:layout_constraintTop_toBottomOf="@+id/detailMBTI"
                         app:layout_constraintVertical_bias="0.428" />
 
@@ -136,7 +123,7 @@
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <ImageView
-                android:id="@+id/detailImgView1"
+                android:id="@+id/intentImg"
                 android:layout_width="300dp"
                 android:layout_height="243dp"
                 android:layout_marginLeft="50dp"
@@ -155,7 +142,7 @@
                 android:layout_marginBottom="30dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/detailImgView1" />
+                app:layout_constraintTop_toBottomOf="@+id/intentImg" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView4"
