@@ -7,7 +7,7 @@
 
     <!-- myPage String -->
     <string name="icon_modify">편집하기</string>
-    <string name="tv_mj"> 오늘 하루는 카페에 가서 카공을 했어요.!  지치지만 그만큼 보람도 느껴지는 하루였습니다!</string>
-    <string name="tv_hh">아침 일찍 운동하러 나갔어요.! 힘들기도 하지만 건강한 몸을 위해 꾸준한 노력이 정말 중요하다는 걸 느꼈습니다!!</string>
-    <string name="tv_sj">오늘은 좋은 날씨에 산책을 나가서 상쾌한 공기를 마시며 시간을 보냈어요!\n </string>
+    <string name="tv_mj"> 오늘 하루는 카페에 가서 카공을 했어요.!\n  지치지만 그만큼 보람도 느껴지는 하루였습니다!</string>
+    <string name="tv_hh">아침 일찍 운동하러 나갔어요.!\n 힘들기도 하지만 건강한 몸을 위해 꾸준한 노력이 정말 중요하다는 걸 느꼈습니다!!</string>
+    <string name="tv_sj">오늘은 좋은 날씨에 산책을 나가서\n 상쾌한 공기를 마시며 시간을 보냈어요!\n </string>
 </resources>
