@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".detailpage.DetailPageActivity">
-
+    tools:context=".detailpage.DetailPage2Activity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
-        android:layout_height="277dp"
+        android:layout_height="312dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -51,11 +50,11 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/ConstraintLayout"
             android:layout_width="match_parent"
-            android:layout_height="210dp"
-            android:background="#D6E268"
-            tools:layout_editor_absoluteY="60dp">
+            android:layout_height="250dp"
+            android:background="#D7E368">
 
             <LinearLayout
+                android:id="@+id/line1"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:background="@drawable/rounded_image"
@@ -70,80 +69,83 @@
                     android:id="@+id/detailImg"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/rounded_image"
+                    android:background="@drawable/img2"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/img1" />
+                    android:src="@drawable/img2" />
             </LinearLayout>
+
 
             <TextView
                 android:id="@+id/detailID"
                 android:layout_width="222dp"
                 android:layout_height="27dp"
                 android:layout_marginBottom="120dp"
-                android:text="minji"
+                android:text="lee"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.877"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.452"
+                app:layout_constraintStart_toEndOf="@+id/line1"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.396" />
+                app:layout_constraintVertical_bias="0.192" />
 
             <TextView
                 android:id="@+id/detailName"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
+                android:layout_marginEnd="68dp"
                 android:layout_marginBottom="108dp"
-                android:text="신민지"
+                android:text="이수진"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.224"
+                app:layout_constraintStart_toEndOf="@+id/line1"
                 app:layout_constraintTop_toBottomOf="@+id/detailID"
-                app:layout_constraintVertical_bias="0.684" />
+                app:layout_constraintVertical_bias="0.149" />
 
             <TextView
                 android:id="@+id/detailMBTI"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
-                android:layout_marginBottom="72dp"
-                android:text="ISFP"
+                android:layout_marginEnd="68dp"
+                android:layout_marginBottom="124dp"
+                android:text="INTP"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
 
-                app:layout_constraintHorizontal_bias="0.535"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintHorizontal_bias="0.228"
+                app:layout_constraintStart_toEndOf="@+id/line1" />
 
             <TextView
                 android:id="@+id/detailComment"
-                android:layout_width="123dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="118dp"
-                android:layout_marginBottom="40dp"
-                android:text="오늘 하루도 화이팅!"
+                android:layout_width="225dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="16dp"
+                android:text="사진은 고양이 무서워하던 저를 좋아하게 만들어준 길고양이입니다.!\n3주 동안 잘 부탁드립니다\n맡은 몫 열심히 하겠습니다 ~"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/frameLayout"
-                app:layout_constraintTop_toBottomOf="@+id/detailMBTI" />
+                app:layout_constraintHorizontal_bias="0.47"
+                app:layout_constraintStart_toEndOf="@+id/line1"
+                app:layout_constraintTop_toBottomOf="@+id/detailMBTI"
+                app:layout_constraintVertical_bias="0.428" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.LinearLayoutCompat>
 
+
     <ScrollView
-        android:layout_width="398dp"
-        android:layout_height="689dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayout">
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ImageView
@@ -152,39 +154,26 @@
                 android:layout_height="243dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/desk"
+                android:background="@drawable/walking"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
 
             <TextView
-                android:layout_width="323dp"
-                android:layout_height="44dp"
+                android:layout_width="300dp"
+                android:layout_height="61dp"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="15dp"
-                android:text="안녕하세요! 예시로 넣은 글입니다!! 잘 부탁드려요!!"
+                android:layout_marginBottom="30dp"
+                android:text="오늘은 좋은 날씨에 산책을 나가서 상쾌한 공기를 마시며 시간을 보냈어요! "
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/detailImgView1" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="73dp"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="37dp"
-                    android:layout_height="34dp"
-                    android:layout_gravity="right"
-                    android:layout_marginRight="50dp"
-                    app:srcCompat="@drawable/heart" />
-            </LinearLayout>
-
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView4"
                 android:layout_width="match_parent"
-                android:layout_height="210dp"
+                android:layout_height="84dp"
                 android:layout_margin="10dp"
                 app:cardCornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -195,17 +184,17 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="15dp">
+                    android:layout_marginTop="10dp">
 
                     <TextView
                         android:id="@+id/commentText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="88dp"
-                        android:layout_marginTop="16dp"
-                        android:text="잘 보고 갑니다!!"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="84dp"
+                        android:layout_marginTop="20dp"
+                        android:text="좋은 글 감사해요!"
                         android:textColor="@color/black"
-                        android:textSize="18dp"
+                        android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -214,20 +203,24 @@
                         android:id="@+id/commentTime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginEnd="15dp"
-                        android:text="2023.08.17"
+                        android:text="2023.08.16"
                         android:textSize="14sp"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.989"
+                        app:layout_constraintStart_toEndOf="@+id/commentText"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
                         android:id="@+id/imageView3"
                         android:layout_width="45dp"
                         android:layout_height="34dp"
+                        android:layout_marginStart="16dp"
                         app:layout_constraintBottom_toBottomOf="@+id/commentText"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/commentText"
+                        app:layout_constraintVertical_bias="0.0"
                         app:srcCompat="@drawable/user" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
