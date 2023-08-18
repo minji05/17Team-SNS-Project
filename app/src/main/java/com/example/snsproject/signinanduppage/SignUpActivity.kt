@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import com.example.snsproject.R
 
 class SignUpActivity : AppCompatActivity() {
@@ -12,29 +13,38 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
-        val et_name = findViewById<EditText>(R.id.et_name)
-        val et_id = findViewById<EditText>(R.id.et_id)
-        val et_pw = findViewById<EditText>(R.id.et_pw)
+        val etName = findViewById<EditText>(R.id.et_name)
+        val etId = findViewById<EditText>(R.id.et_id)
+        val etPw = findViewById<EditText>(R.id.et_pw)
+        val etMbti = findViewById<EditText>(R.id.et_mbti)
 
         val btn_signUp = findViewById<Button>(R.id.btn_signUp)
         val btn_cancel = findViewById<Button>(R.id.btn_cancel)
 
-        btn_signUp.setOnClickListener{
-            if(et_name.text.toString().trim().isEmpty()||et_id.text.toString().trim().isEmpty()||et_pw.text.toString().trim().isEmpty()){
-                //Toast.makeText(this, getString(R.string.toast_msg_noinput), Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
+        btn_signUp.setOnClickListener {
+            if (etName.text.toString().isNotBlank() && etId.text.toString().isNotBlank() && etPw.text.toString().isNotBlank() && etMbti.text.toString().isNotBlank())
+            {
+                val userInfo = UserInfo(
+                    etName.text.toString(),
+                    etId.text.toString(),
+                    etPw.text.toString(),
+                    etMbti.text.toString()
+                )
+
+                UserManager.addUser(userInfo)
+
+                Toast.makeText(this, "회원가입 성공!!", Toast.LENGTH_SHORT).show()
+
+                val intent = Intent().apply {
+                    putExtra("id", etId.text.toString())
+                    putExtra("pw", etPw.text.toString())
+                }
+
+                setResult(RESULT_OK, intent)
+                if (!isFinishing) finish()
+            } else {
+                Toast.makeText(this, "빈칸을 채워 주세요", Toast.LENGTH_SHORT).show()
             }
-
-
-            val intent = Intent(this, SignInActivity::class.java).apply {
-                putExtra("id", et_id.text.toString())
-                putExtra("pw", et_pw.text.toString())
-            }
-
-            setResult(RESULT_OK, intent)
-
-            if (!isFinishing) finish()
-
         }
 
         btn_cancel.setOnClickListener {

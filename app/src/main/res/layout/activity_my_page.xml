@@ -12,11 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         tools:ignore="MissingConstraints">
+
         <ImageView
             android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:src="@drawable/img_sea"/>
+            android:src="@drawable/iv_home_logo" />
     </androidx.appcompat.widget.Toolbar>
+
     <ScrollView
         android:id="@+id/scrollView_memberinfo"
         android:layout_width="match_parent"
@@ -51,10 +53,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="4"
-                    android:text="이메일: " />
+                    android:text="ID: " />
 
                 <TextView
-                    android:id="@+id/textview_updateemail"
+                    android:id="@+id/txt_id"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -75,25 +77,12 @@
                     android:layout_weight="4"
                     android:text="비밀번호: " />
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
                     <TextView
-                        android:id="@+id/textview_updatepassword"
+                        android:id="@+id/tex_password"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Test"
-                        android:visibility="visible" />
-
-                    <EditText
-                        android:id="@+id/edittext_updatepassword"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="비밀번호"
-                        tools:visibility="gone" />
-                </FrameLayout>
+                        android:layout_weight="1"
+                        android:text="Test"/>
             </LinearLayout>
 
             <LinearLayout
@@ -109,26 +98,12 @@
                     android:layout_height="match_parent"
                     android:layout_weight="4"
                     android:text="이름: " />
-
-                <FrameLayout
+                <TextView
+                    android:id="@+id/txt_name"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-                    <TextView
-                        android:id="@+id/textview_updatename"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Test"
-                        android:visibility="visible" />
-
-                    <EditText
-                        android:id="@+id/edittext_updatename"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="이름"
-                        tools:visibility="gone" />
-                </FrameLayout>
+                    android:layout_weight="1"
+                    android:text="Test"/>
             </LinearLayout>
 
 
@@ -144,72 +119,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="4"
-                    android:text="생일: " />
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-                    <TextView
-                        android:id="@+id/textview_updatebirthday"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Test"
-                        android:visibility="visible" />
-
-                    <EditText
-                        android:id="@+id/edittext_updatebirthday"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="생일"
-                        tools:visibility="gone" />
-                </FrameLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
+                    android:text="MBTI: " />
 
                 <TextView
+                    android:id="@+id/txt_mbti"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="4"
-                    android:text="주소: " />
+                    android:layout_weight="1"
+                    android:text="Test" />
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-                    <TextView
-                        android:id="@+id/textview_updateaddress"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Test"
-                        android:visibility="visible" />
-
-                    <EditText
-                        android:id="@+id/edittext_updateaddress"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="주소"
-                        tools:visibility="gone" />
-                </FrameLayout>
             </LinearLayout>
-
-            <Button
-                android:id="@+id/btn_update"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="20dp"
-                android:text="등록하기" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

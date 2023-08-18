@@ -1,5 +1,6 @@
 package com.example.snsproject
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +15,7 @@ import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
 import com.example.snsproject.detailpage.DetailPageActivity
+import com.example.snsproject.signinanduppage.UserInfo
 
 class MainActivity : AppCompatActivity() {
 

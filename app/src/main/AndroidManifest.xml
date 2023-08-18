@@ -23,11 +23,11 @@
             android:name=".signinanduppage.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".signinanduppage.SignInActivity"
+            android:name=".MainActivity"
             android:exported="false" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".signinanduppage.SignInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
