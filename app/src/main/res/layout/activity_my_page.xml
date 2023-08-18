@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".mypage.MyPageActivity">
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_myPage"
         android:layout_width="match_parent"
@@ -16,12 +17,6 @@
             android:layout_height="match_parent"
             android:src="@drawable/img_sea"/>
     </androidx.appcompat.widget.Toolbar>
-
-    <Button
-        android:id="@+id/btn_modify"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="편집"/>
     <ScrollView
         android:id="@+id/scrollView_memberinfo"
         android:layout_width="match_parent"
@@ -42,33 +37,6 @@
                 android:src="@drawable/img_profile_add"
                 app:civ_border_color="@color/profile_line"
                 app:civ_border_width="1dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/btn_updateCamera"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:text="카메라" />
-
-                <Button
-                    android:id="@+id/btn_updateGallery"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_weight="1"
-                    android:text="앨범" />
-            </LinearLayout>
-
 
             <LinearLayout
                 android:layout_width="match_parent"

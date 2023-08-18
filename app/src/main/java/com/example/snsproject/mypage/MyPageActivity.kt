@@ -2,6 +2,7 @@ package com.example.snsproject.mypage
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
@@ -20,7 +21,6 @@ class MyPageActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
-        val btnReverse = findViewById<Button>(R.id.btn_modify)
         val btnUpdate = findViewById<Button>(R.id.btn_update)
 
         /*
@@ -74,17 +74,21 @@ class MyPageActivity : AppCompatActivity() {
         }
          */
 
-        btnReverse.setOnClickListener {
-            reverseText()
-        }
-
         btnUpdate.setOnClickListener {
             textUpdate()
         }
     }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.item_toolbar_mypage, menu)
+        return true
+    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            R.id.item_modify-> {
+                reverseText()
+                return super.onOptionsItemSelected(item)
+            }
             android.R.id.home -> {
                 finish()
                 return super.onOptionsItemSelected(item)

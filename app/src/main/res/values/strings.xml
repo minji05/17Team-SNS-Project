@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">SNSProject</string>
+    <string name="item_memberinfo_delete" />
+    <string name="item_memberinfo_update" />
+    <drawable name="item_memberinfo_delete" />
+    <drawable name="item_memberinfo_update" />
+
+    <!-- myPage String -->
+    <string name="icon_modify">편집하기</string>
 </resources>
