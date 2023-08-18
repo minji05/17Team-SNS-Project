@@ -15,22 +15,30 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:src="@drawable/_111"
+            android:src="@drawable/signal"
             android:layout_gravity="end"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="♡♡♡♡♡♡♡♡♡♡"
+            android:textAlignment="center"
+            android:textSize="19dp" />
+
     </androidx.appcompat.widget.Toolbar>
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="♡♡♡♡♡♡♡♡♡♡"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="19dp" />
+        android:orientation="horizontal"
+        android:background="#009688">
 
+    <!--프로필이름-->
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="96dp"
-        android:layout_height="118dp"
+        android:id="@+id/name_dh"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="10dp"
@@ -38,13 +46,36 @@
         app:srcCompat="@drawable/dh" />
 
     <ImageView
-        android:layout_width="96dp"
-        android:layout_height="118dp"
+        android:id="@+id/name_hh"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         app:srcCompat="@drawable/hh" />
+
+        <ImageView
+        android:id="@+id/name_sj"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/sj" />
+
+        <ImageView
+            android:id="@+id/name_mj"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/mj" />
+
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -60,13 +91,160 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--mj-->
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:id="@+id/name_mj_s"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/mj" />
+
+            <ImageView
+                android:layout_width="272dp"
+                android:layout_height="132dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
-                android:scaleType="center"
+                android:layout_marginBottom="10dp"
+                android:scaleType="fitCenter"
                 app:srcCompat="@drawable/goyang" />
+
+
+
+        </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_mj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tv_mj"
+                android:textSize="8pt"
+                android:layout_marginBottom="45dp"/>
+
+            <!--dh-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="30dp"
+                android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--mj-->
+            <ImageView
+                android:id="@+id/name_dh_s"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/dh" />
+
+            <ImageView
+                android:layout_width="277dp"
+                android:layout_height="187dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/goyang" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_dh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tv_dh"
+                android:textSize="8pt"
+                android:layout_marginBottom="45dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="30dp"
+                android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--mj-->
+            <ImageView
+                android:id="@+id/name_hh_s"
+                android:layout_width="39dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/hh" />
+            <!--hh-->
+            <ImageView
+                android:layout_width="287dp"
+                android:layout_height="187dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/goyang" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_hh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tv_hh"
+                android:textSize="8pt"
+                android:layout_marginBottom="45dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="30dp"
+                android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--mj-->
+            <ImageView
+                android:id="@+id/name_sj_s"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/sj" />
+            <!--sj-->
+            <ImageView
+                android:layout_width="307dp"
+                android:layout_height="187dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/goyang" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_sj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tv_sj"
+                android:textSize="7.8pt"
+                android:layout_marginBottom="45dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="30dp"
+                android:background="@android:color/darker_gray" />
 
 
         </LinearLayout>
