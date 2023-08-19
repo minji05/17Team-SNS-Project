@@ -141,7 +141,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="30dp"
-                android:text="오늘은 좋은 날씨에 산책을 나가서 상쾌한 공기를 마시며 시간을 보냈어요! "
+                android:text="오늘 하루는 카페에 가서 카공을 했어요.!  지치지만 그만큼 보람도 느껴지는 하루였습니다!! "
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/intentImg" />

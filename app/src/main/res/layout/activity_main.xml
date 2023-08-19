@@ -95,12 +95,18 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <!--mj-->
-                <ImageView
+                <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/name_mj_s"
-                    android:layout_width="130dp"
+                    android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_weight="1"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    app:shapeAppearanceOverlay="@style/RoundedShapeAppearanceOverlay"
                     app:srcCompat="@drawable/mj" />
+
+
 
                 <ImageView
                     android:layout_width="272dp"
@@ -142,14 +148,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <!--mj-->
-                <ImageView
-                    android:id="@+id/name_hh_s"
-                    android:layout_width="39dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/hh" />
+
                 <!--hh-->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/name_hh_s"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    app:shapeAppearanceOverlay="@style/RoundedShapeAppearanceOverlay"
+                    app:srcCompat="@drawable/hh" />
+
                 <ImageView
                     android:layout_width="287dp"
                     android:layout_height="187dp"
@@ -180,14 +191,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <!--mj-->
-                <ImageView
-                    android:id="@+id/name_sj_s"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/sj" />
+
                 <!--sj-->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/name_sj_s"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    app:shapeAppearanceOverlay="@style/RoundedShapeAppearanceOverlay"
+                    app:srcCompat="@drawable/sj" />
+
                 <ImageView
                     android:layout_width="307dp"
                     android:layout_height="187dp"
