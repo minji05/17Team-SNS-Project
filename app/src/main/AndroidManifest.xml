@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
 
     <application
         android:allowBackup="true"
@@ -12,17 +17,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SNSProject"
         tools:targetApi="31">
+
         <activity
-            android:name=".MainActivity"
+            android:name=".mypage.MyPageActivity"
             android:exported="false" />
         <activity
             android:name=".detailpage.DetailPageActivity"
             android:exported="false" />
         <activity
-            android:name=".signinanduppage.SignInActivity"
+            android:name=".signinanduppage.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".mypage.MyPageActivity"
+            android:name=".signinanduppage.SignInActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,5 +41,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

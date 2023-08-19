@@ -3,34 +3,39 @@ package com.example.snsproject.mypage
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
-import android.widget.Button
-import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import com.example.snsproject.R
+import com.example.snsproject.signinanduppage.UserInfo
 
 class MyPageActivity : AppCompatActivity() {
+
+    private lateinit var userInfo: UserInfo
+    //private lateinit var civProfile: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_page)
-
-        firstReverseText()
 
         setSupportActionBar(requireViewById(R.id.toolbar_myPage))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
-        val btnReverse: Button = findViewById(R.id.btn_modify)
-        val btnUpdate: Button = findViewById(R.id.btn_update)
+        userInfo = intent.getParcelableExtra("user_info") ?: UserInfo("", "", "", "")
+        displayUserInfo()
+        //displayProfileImage()
 
-        btnReverse.setOnClickListener {
-            reverseText()
-        }
+        //civProfile = findViewById(R.id.civ_profile)
 
-        btnUpdate.setOnClickListener {
-            textUpdate()
-        }
+        /*Glide.with(this)
+            .load(userInfo.profile)
+            .placeholder(R.drawable.iv_home_logo) // Placeholder image while loading
+            .error(R.drawable.img_profile_add) // Image to display if loading fails
+            .into(civProfile)*/
     }
+    /*override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.item_toolbar_mypage, menu)
+        return true
+    }*/
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
@@ -41,125 +46,24 @@ class MyPageActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-    private fun textUpdate(){
-        val txtEmail: TextView = findViewById(R.id.textview_updateemail)
-        val editPassword: EditText = findViewById(R.id.edittext_updatepassword)
-        val editName: EditText = findViewById(R.id.edittext_updatename)
-        val editBirthday: EditText = findViewById(R.id.edittext_updatebirthday)
-        val editAddress: EditText = findViewById(R.id.edittext_updateaddress)
 
-        txtEmail.text.toString()
-        editPassword.text.toString()
-        editName.text.toString()
-        editBirthday.text.toString()
-        editAddress.text.toString()
+    private fun displayUserInfo() {
+        val txtName = findViewById<TextView>(R.id.txt_name)
+        val txtId = findViewById<TextView>(R.id.txt_id)
+        val txtMbti = findViewById<TextView>(R.id.txt_mbti)
+
+        txtName.text = userInfo.name
+        txtId.text = userInfo.id
+        txtMbti.text = userInfo.mbti
     }
-    private fun firstReverseText() {
-        val txtEmail: TextView = findViewById(R.id.textview_updateemail)
-        val txtPassword: TextView = findViewById(R.id.textview_updatepassword)
-        val txtName: TextView = findViewById(R.id.textview_updatename)
-        val txtBirthday: TextView = findViewById(R.id.textview_updatebirthday)
-        val txtAddress: TextView = findViewById(R.id.textview_updateaddress)
 
-        val editPassword: EditText = findViewById(R.id.edittext_updatepassword)
-        val editName: EditText = findViewById(R.id.edittext_updatename)
-        val editBirthday: EditText = findViewById(R.id.edittext_updatebirthday)
-        val editAddress: EditText = findViewById(R.id.edittext_updateaddress)
+    /*private fun displayProfileImage() {
+        val profile: ImageView = findViewById(R.id.civ_profile)
 
-        if (txtPassword.visibility.equals(View.VISIBLE) &&
-            txtName.visibility.equals(View.VISIBLE) &&
-            txtBirthday.visibility.equals(View.VISIBLE) &&
-            txtAddress.visibility.equals(View.VISIBLE)
-        ) {
-            txtEmail.setText("이메일 intent 받기")
-
-            editPassword.setVisibility(View.VISIBLE)
-            txtPassword.setVisibility(View.GONE)
-            txtPassword.setText("패스워트 intent 받기")
-
-            editName.setVisibility(View.VISIBLE)
-            txtName.setVisibility(View.GONE)
-            txtName.setText("이름 intent 받기")
-
-            editBirthday.setVisibility(View.VISIBLE)
-            txtBirthday.setVisibility(View.GONE)
-            txtBirthday.setText("생일 intent 받기")
-
-            editAddress.setVisibility(View.VISIBLE)
-            txtAddress.setVisibility(View.GONE)
-            txtAddress.setText("주소 intent 받기")
-
+        // Check if the profile image URI is not null and not empty
+        if (!userInfo.profile.isNullOrEmpty()) {
+            val profileUri = Uri.parse(userInfo.profile.toString())
+            profile.setImageURI(profileUri)
         }
-    }
-    private fun reverseText() {
-        val txtEmail: TextView = findViewById(R.id.textview_updateemail)
-        val txtPassword: TextView = findViewById(R.id.textview_updatepassword)
-        val txtName: TextView = findViewById(R.id.textview_updatename)
-        val txtBirthday: TextView = findViewById(R.id.textview_updatebirthday)
-        val txtAddress: TextView = findViewById(R.id.textview_updateaddress)
-
-        val editPassword: EditText = findViewById(R.id.edittext_updatepassword)
-        val editName: EditText = findViewById(R.id.edittext_updatename)
-        val editBirthday: EditText = findViewById(R.id.edittext_updatebirthday)
-        val editAddress: EditText = findViewById(R.id.edittext_updateaddress)
-
-        if (txtPassword.visibility.equals(View.VISIBLE) &&
-            txtName.visibility.equals(View.VISIBLE) &&
-            txtBirthday.visibility.equals(View.VISIBLE) &&
-            txtAddress.visibility.equals(View.VISIBLE)
-        ) {
-            txtEmail.setText("이메일 intent 받기")
-
-            editPassword.setVisibility(View.VISIBLE)
-            txtPassword.setVisibility(View.GONE)
-            editPassword.setText("패스워트 intent 받기")
-
-            editName.setVisibility(View.VISIBLE)
-            txtName.setVisibility(View.GONE)
-            editName.setText("이름 intent 받기")
-
-            editBirthday.setVisibility(View.VISIBLE)
-            txtBirthday.setVisibility(View.GONE)
-            editBirthday.setText(
-                "생일 intent 받기"
-            )
-
-            editAddress.setVisibility(View.VISIBLE)
-            txtAddress.setVisibility(View.GONE)
-            editAddress.setText("주소 intent 받기")
-
-        } else if (editPassword.visibility.equals(View.VISIBLE) &&
-            editName.visibility.equals(View.VISIBLE) &&
-            editBirthday.visibility.equals(View.VISIBLE) &&
-            editAddress.visibility.equals(View.VISIBLE)
-        ) {
-            txtEmail.setText(
-                "이메일 intent 받기"
-            )
-
-            editPassword.setVisibility(View.GONE)
-            txtPassword.setVisibility(View.VISIBLE)
-            txtPassword.setText(
-                "패스워트 intent 받기"
-            )
-
-            editName.setVisibility(View.GONE)
-            txtName.setVisibility(View.VISIBLE)
-            txtName.setText(
-                "이름 intent 받기"
-            )
-
-            editBirthday.setVisibility(View.GONE)
-            txtBirthday.setVisibility(View.VISIBLE)
-            txtBirthday.setText(
-                "생일 intent 받기"
-            )
-
-            editAddress.setVisibility(View.GONE)
-            txtAddress.setVisibility(View.VISIBLE)
-            txtAddress.setText(
-                "주소 intent 받기"
-            )
-        }
-    }
+    }*/
 }
