@@ -8,6 +8,7 @@ data class UserInfo(
     val name: String,
     val id: String,
     val password: String,
-    val mbti: String
+    val mbti: String,
+    var profile: String? = null
 ) : Parcelable
 

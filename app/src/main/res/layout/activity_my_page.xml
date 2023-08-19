@@ -14,8 +14,9 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:layout_width="100dp"
+            android:layout_width="50dp"
             android:layout_height="match_parent"
+            android:adjustViewBounds="true"
             android:src="@drawable/iv_home_logo" />
     </androidx.appcompat.widget.Toolbar>
 
@@ -31,14 +32,13 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/circleImageView_profile_add"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/img_profile_add"
-                app:civ_border_color="@color/profile_line"
-                app:civ_border_width="1dp" />
+            <ImageView
+                android:id="@+id/civ_profile"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_margin="20dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/img_profile_add"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

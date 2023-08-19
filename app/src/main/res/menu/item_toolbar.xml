@@ -2,23 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <group>
-
     <item
-        android:id="@+id/item_memberinfo_delete"
+        android:id="@+id/item_SignIn"
         android:enabled="true"
         android:title="@string/item_memberinfo_delete"
-        android:icon="@drawable/item_memberinfo_delete"
-        app:showAsAction="never" />
-
+        android:icon="@drawable/img_profile_add"
+        app:showAsAction="always" />
+    <!--
     <item
         android:id="@+id/item_memberinfo_update"
         android:enabled="true"
         android:title="@string/item_memberinfo_update"
-        android:icon="@drawable/item_memberinfo_update"
+        android:icon="@drawable/icon_modify"
         app:showAsAction="never" />
-
-    </group>
-
+        -->
 </menu>
 
