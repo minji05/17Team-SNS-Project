@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".mypage.MyPageActivity">
-
+    tools:context=".mypage.MyPageMJActivity">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_myPage"
         android:layout_width="match_parent"
@@ -40,7 +39,7 @@
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
                 android:adjustViewBounds="true"
-                android:src="@drawable/img_profile_add"
+                android:src="@drawable/pic_mj"
                 android:scaleType="centerCrop"
                 app:shapeAppearanceOverlay="@style/RoundedShapeAppearanceOverlay"/>
 
@@ -64,7 +63,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Test" />
+                    android:text="minji05" />
             </LinearLayout>
 
             <LinearLayout
@@ -85,7 +84,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Test"/>
+                    android:text="신민지"/>
             </LinearLayout>
 
 
@@ -108,8 +107,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Test" />
-
+                    android:text="INFP" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="profile_line">#319DC3</color>
     <color name="lightgray">#EEEEEE</color>
+    <color name="btn_color">#F0A22E</color>
 </resources>

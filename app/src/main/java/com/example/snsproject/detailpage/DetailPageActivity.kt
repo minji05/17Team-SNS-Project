@@ -11,28 +11,28 @@ class DetailPageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_page)
-        //전달받은 데이터를 출력
+        /*
         val text = intent.getStringExtra("dataFromFirstActivity")
         val TextView = findViewById<TextView>(R.id.intentContent)
-        TextView.text ="${text}"
+        TextView.text = "${text}"
 
         val resId = intent.getIntExtra("imageResId", 1)
         val image = findViewById<ImageView>(R.id.intentImg)
-        image.setImageResource(resId)
+        image.setImageResource(resId)*/
 
 
-        setSupportActionBar(requireViewById(R.id.detailToolbar))
+        setSupportActionBar(requireViewById(R.id.toolbar_detail))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
-//        //뒤로가기 버튼 누를 시
-//        val btn = findViewById<Button>(R.id.backBtn)
-//        btn.setOnClickListener {
-//            finish()
-//        }
-//
+        /*
+        val btn = findViewById<Button>(R.id.backBtn) btn . setOnClickListener {
+            finish()
+        }*/
+
 
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> {

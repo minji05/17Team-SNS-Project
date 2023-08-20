@@ -108,7 +108,8 @@
             android:layout_height="wrap_content"
             android:text="@string/signIn_login"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="@color/btn_color"/>
 
         <Button
             android:id="@+id/btn_signUp"
@@ -116,8 +117,8 @@
             android:layout_height="wrap_content"
             android:text="@string/signIn_signup"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.505"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="@color/btn_color"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

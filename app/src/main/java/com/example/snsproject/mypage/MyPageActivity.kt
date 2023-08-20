@@ -3,7 +3,6 @@ package com.example.snsproject.mypage
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.ImageView
 import android.widget.TextView
 import com.example.snsproject.R
 import com.example.snsproject.signinanduppage.UserInfo
@@ -11,6 +10,7 @@ import com.example.snsproject.signinanduppage.UserInfo
 class MyPageActivity : AppCompatActivity() {
 
     private lateinit var userInfo: UserInfo
+
     //private lateinit var civProfile: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

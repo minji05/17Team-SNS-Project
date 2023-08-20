@@ -1,23 +1,23 @@
-package com.example.snsproject.detailpage
+package com.example.snsproject.mypage
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import com.example.snsproject.R
+import com.example.snsproject.signinanduppage.UserInfo
 
-class DetailPage1Activity : AppCompatActivity() {
+class MyPageHHActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail_page1)
+        setContentView(R.layout.activity_my_page_hhactivity)
 
-        setSupportActionBar(requireViewById(R.id.toolbar_detail1))
+        setSupportActionBar(requireViewById(R.id.toolbar_myPage))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> {
@@ -27,5 +27,4 @@ class DetailPage1Activity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-
 }

@@ -12,7 +12,7 @@ class DetailPage2Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_page2)
 
-        setSupportActionBar(requireViewById(R.id.detailToolbar))
+        setSupportActionBar(requireViewById(R.id.toolbar_detail2))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
