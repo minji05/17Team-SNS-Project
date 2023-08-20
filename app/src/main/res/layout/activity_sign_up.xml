@@ -137,9 +137,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/signUp_pw"
-                    android:inputType="text"
+                    android:inputType="textPassword"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"/>
             </LinearLayout>
 
             <LinearLayout
